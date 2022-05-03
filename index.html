@@ -4,13 +4,156 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./reset.css">
     <title>Kim Hyunki's Portfolio</title>
+
+    <style>
+
+        /* 공통스타일 */
+        .wrap 
+        {
+            background-color: #fff;
+            font-size:16px;
+            overflow: hidden;
+          
+        }
+        .container
+        {
+             width:100%;   
+             max-width:2200px;
+            margin:0 auto;
+             
+        }
+
+        .content
+        {
+            position:relative;
+            width:100%;
+         
+        }
+        img
+        {
+            width:100%;
+        }
+
+        /* 스킵메뉴 */
+        .skip-menu a
+        {
+            position:fixed;
+            left:-500px;
+            color:#fff;
+            border:1px solid rgb(80, 72, 72);
+            padding:16px;
+            background-color:rgba(0,0,0,0.5);
+        }
+
+        .skip-menu a:focus,.skip-menu:active a
+        {
+            left:0px;
+        }   
+
+
+        /* 헤더 스타일 */
+        .header
+        {
+            position:relative;
+            z-index:2;
+        }
+        .header .container .contents 
+        {
+            position:fixed;
+            left:0;
+            right:0;
+            top:0;
+            display:flex;
+            flex-flow:row nowrap;
+            justify-content:space-between;
+            align-items:center;
+            padding:10px 50px;
+            font-size:1.2em;
+            
+
+        }
+
+        .header .container .contents h1
+        {
+            line-height:200%;
+        }
+      
+        .main-nav
+        {
+           
+            width:30%;
+            top:0%;
+            left:0%;
+            transform:translate(-50% -50%);
+            font-weight:700;
+           
+        
+        }
+        .main-nav ul
+        {
+            display:flex;
+            flex-flow:row nowrap;
+            justify-content:space-around;
+            align-items: center;
+            
+        }
+        .main-nav ul li
+        {
+            margin-right:20px;
+        }
+        
+        
+
+        
+        #background
+        {
+            width:100vw;
+            height:100vh;
+            background:url(./images/kattegat.jpg) no-repeat fixed center ;
+            background-size: cover;
+            background-attachment: fixed;
+            position:relative;
+            z-index:1;
+            margin-bottom:200px;
+        }
+
+        #background h2
+        {
+            position:absolute;
+            top:50%;
+            left:30%;
+            transform: translate(-50%,-50%);
+            padding:20px;
+            text-align:center;
+            color:rgb(231, 223, 223);
+            font-size:5em;
+            background-color:rgba(0,0,0,0.35)
+        }
+
+        
+       
+       
+    </style>
 </head>
 <body>
+    <div class="skip-menu">
+        <a href="./index.html">Home</a>
+        <a href="#">Profile</a>
+        <a href="#">skills</a>
+        <a href="#">Portfolio</a>
+        <a href="#">contact</a>
+    </div>
     <div class="wrap">
         <header class="header">
             <div class="container">
                 <div class="contents">
+
+                    <h1 class="title">
+                        portfolio
+                    </h1>
+
                     <nav class="main-nav">
                         <ul>
                             <li>
@@ -39,20 +182,32 @@
                                 </a>
                             </li>
                         </ul>
-                    </nav>
-                    <h1 class="title">
-                        portfolio
-                    </h1>
+                    </nav>                   
+                    
                 </div>
             </div>
         </header>
 
+
+        <div class="sec-bacrground">
+            <div class="img-box"id="background">
+                <h2>
+                    Welcome 
+                    <br>To My
+                    <br>Portfolio
+                </h2>
+            </div>
+        </div>
         <section class="sec">
             <div class="container">
+               
                 <div class="contents profile">
                     <div class="content">
+
+                       
+
                         <div class="img-box">
-                            <img src="./images/right.PNG" alt="내사진">
+                        <img src="./images/right.PNG" alt="내사진">
                         </div>
                         <div class="txt profile-text">
                             <h3>
