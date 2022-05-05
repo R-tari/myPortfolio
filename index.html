@@ -21,8 +21,8 @@
         {
              width:100%;   
              max-width:2200px;
+             padding: 0 10%;
             margin:0 auto;
-             
         }
 
         .content
@@ -105,8 +105,10 @@
         }
         
         
-
         
+
+        /* 섹션스타일 */
+
         #background
         {
             width:100vw;
@@ -116,7 +118,7 @@
             background-attachment: fixed;
             position:relative;
             z-index:1;
-            margin-bottom:200px;
+            margin-bottom:100px;
         }
 
         #background h2
@@ -131,6 +133,244 @@
             font-size:5em;
             background-color:rgba(0,0,0,0.35)
         }
+
+        /* 프로필 스타일 */
+
+        .profile .content
+        {
+            display:grid;
+            grid-template-columns: 1fr 2fr;
+            grid-column-gap: 20px;
+            margin-bottom:200px;
+        }
+
+        .profile-title
+        {
+            text-align:center;
+            margin-bottom:100px;
+        }
+        .profile-title h3
+        {
+            text-align:center;
+            font-size:3em;
+            margin-bottom:50px;
+        }
+
+        .profile .img-box
+        {
+            margin:0 auto;
+            width:70%;
+            height:60%;
+             border-radius: 5px;
+             overflow: hidden;
+            box-shadow: 5px 5px  70px rgb(185, 181, 177)  ;
+            padding-top:calc(50%/1*1);
+        }
+
+   
+
+        .profile-title h4
+        {
+            font-size:1.7em;
+        }
+        .profile .content .txt h3
+        {
+            font-size:1.5em;
+        }
+
+
+        .profile-text
+        {
+            font-size:1em;
+            line-height:2em;
+            display:grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .profile span
+        {
+            display:inline-block;
+            width:150px;
+            font-weight:900;
+            font-size:1.5em;
+            
+        }
+
+        
+       
+
+        .profile-text :nth-child(5)
+        {
+            display:flex;
+            flex-flow:row nowrap;
+        }
+        .profile-text :nth-child(5) span
+        {
+            margin-right:1.5%;
+        }
+
+        .profile-text :nth-child(6)
+        {
+            display:flex;
+            flex-flow:row nowrap;
+            grid-column-start: 2;
+            grid-column-end:3;
+        }
+
+        .profile-text :last-child
+        {
+            grid-column-start: 1;
+            grid-column-end:3;
+        }
+
+
+        /* 스킬 */
+
+        .skills
+        {
+            display:grid;
+            grid-template-columns: repeat(4, 1fr);
+            margin-bottom:200px;
+        }
+        
+        .progress
+        {
+            position:relative;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom:100px;
+            
+        }
+
+        .progress .percent
+        {
+            position: relative;
+            width:150px;
+            height:150px;
+
+        }
+
+        .progress .percent svg
+        {
+            position:relative;
+            width:150px;
+            height:150px;
+            z-index:3;
+            
+        }
+        .progress .percent svg circle
+        {
+            width:150px;
+            height:150px;
+            fill:none;
+            stroke-width: 10;
+            stroke:#000;
+            transform:translate(5px,5px);
+            stroke-dasharray: 440;
+            stroke-dashoffset: 440;
+            stroke-linecap:round;
+        }
+
+        .progress .percent svg circle:nth-child(1)
+        {
+            stroke-dashoffset: 0;
+            stroke:#f3f3f3;
+        }
+
+        .progress .percent svg circle:nth-child(2)
+        {
+            stroke-dashoffset: calc(440 - (440*70)/100);
+            stroke:#03a9f4;
+        }
+        .progress .percent .number
+        {
+            position:absolute;
+            top: 0;
+            left:0;
+            width:100%;
+            height:100%;
+            display:flex;
+            justify-content: center;
+            align-items:center;
+            color:rgba(0, 0, 0,0.7);
+            z-index:2;
+
+            opacity:0; 
+            /* 마우스 오버시 보이도록 */
+        }
+        
+
+        .progress .percent .number h2
+        {
+            font-size:48px;
+        }
+
+        .progress .percent .number h2 span
+        {
+            font-size:24px;
+        } 
+
+        .progress .text
+        {
+            padding:10px 0 0;
+            color:#999;
+            font-weight:700;
+            letter-spacing: 1px;
+        }
+
+        .progress .img-box
+        {
+            width:70%;
+            height:70%;
+            position:absolute;
+            left:50%;
+            top:50%;
+            transform:translate(-50%,-50%);
+            z-index:1;
+        }
+        
+         .progress:nth-child(2) .img-box img
+        {
+            width:70%;
+            height:100%;
+            transform:translate(20%,-0%);
+        } 
+
+        .progress:nth-child(4) .img-box img
+        {
+          
+            transform:translate(0%,50%);
+        } 
+        .progress:nth-child(5) .img-box img
+        {
+          
+            transform:translate(0%,5%);
+        } 
+        .progress:nth-child(6) .img-box img
+        {
+          
+            transform:translate(0%,40%);
+        } 
+        .progress:nth-child(8) .img-box img
+        {
+          
+            transform:translate(0%,15%);
+        } 
+
+
+
+        /* 포트폴리오 페이지 */
+
+        
+    
+
+
+      
+
+
+
 
         
        
@@ -198,98 +438,203 @@
                 </h2>
             </div>
         </div>
+
         <section class="sec">
             <div class="container">
-               
                 <div class="contents profile">
+                    <div class="profile-title">
+                        <h3>
+                            About Me
+                        </h3>
+                        <h4>
+                            어제보다 오늘 더 나은 프론트엔드 개발자 김현기입니다.
+                        </h4>
+                    </div>
                     <div class="content">
-
-                       
-
                         <div class="img-box">
                         <img src="./images/right.PNG" alt="내사진">
                         </div>
                         <div class="txt profile-text">
-                            <h3>
-                                어제보다 오늘 더 나은 프론트엔드 개발자 김현기입니다.
-                            </h3>
+                            
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis totam, possimus labore voluptatem amet quibusdam odit placeat, officia, nam tempore repellat sequi hic velit accusamus illo porro sunt alias quod.
-                                At harum alias debitis, voluptas temporibus corporis nemo est autem amet ex numquam, quisquam tempore, odit sit qui delectus. Quo, dolorum aliquam porro officiis temporibus consequatur itaque iusto fugiat ut?
-                                Quidem et tenetur numquam consequatur corrupti voluptates commodi aliquam molestias inventore molestiae reprehenderit libero aliquid delectus illo voluptatem deleniti, quia dignissimos adipisci repellendus reiciendis non modi est! A, id maxime.
+                                <span>NAME</span>
+                                김현기
                             </p>
+                            <p>
+                                <span>BIRTH DATE</span>
+                                1996.10.29(27세)
+                            </p>
+                            <p>
+                                <span>ADDRESS</span>
+                                인천광역시 연수구 연수동 
+                            </p>
+                            <p>
+                                <span>E-MAIL</span>
+                                rlaahrns96@naver.com
+                            </p>
+                            <p>
+                                <span>EDUCATION</span>
+                                2021.11 - 2022.05
+                                <br> 
+                                연희직업전문학교
+                                <br>
+                                프론트엔드&백엔드
+                                <br>
+                                디지털 커머스 융합 
+                                <br>
+                                웹앱개발자과정S 수료
+                            </p>
+
+                            <p>
+                                <span>LICENSE</span>
+                                    2012.12.28
+                                    <br>
+                                    항공기관정비기능사
+                                    <br>
+                                    2013.06.28
+                                    <br>
+                                    항공기체정비기능사
+                                    <br>
+                                    2014.07.04
+                                    <br>
+                                    무선설비기능사
+                            </p>
+
+                                <p>
+                            
+                                    <br>
+                                    
+                                </p>
                         </div>
                     </div>
                 </div>
                 <div class="contents skills">
-                    <div class="content">
-                        <div class="img-box">
-                            <img src="./images/left.PNG" alt="HTML 이미지">
-                        </div>
-                        <h4>
-                            HTML
-                        </h4>
-                    </div>
-                    <div class="content">
-                        <div class="img-box">
-                            <img src="./images/left.PNG" alt="CSS 이미지">
-                        </div>
-                        <h4>
-                            CSS
-                        </h4>
-                    </div>
-                    <div class="content">
-                        <div class="img-box">
-                            <img src="./images/left.PNG" alt="JS 이미지">
-                        </div>
-                        <h4>
-                            JavaScript
-                        </h4>
-                    </div>
-                    <div class="content">
-                        <div class="img-box">
-                            <img src="./images/left.PNG" alt="jquery 이미지">
-                        </div>
-                        <h4>
-                            Jquery
-                        </h4>
-                    </div>
-                    <div class="content">
-                        <div class="img-box">
-                            <img src="./images/left.PNG" alt="React 이미지">
-                        </div>
-                        <h4>
-                            React
-                        </h4>
-                    </div>
 
-                    <div class="content">
-                        <div class="img-box">
-                            <img src="./images/left.PNG" alt="Java 이미지">
+                    <div class="progress">
+                        <div class="percent">
+                            <svg>
+                                <circle cx="70" cy="70" r="70"></circle> 
+                                <circle cx="70" cy="70" r="70"></circle> 
+                            </svg>
+                            <div class="number">
+                                <h2>70<span>%</span></h2>
+                            </div>
+                            <div class="img-box">
+                                <img src="./images/html.png" alt="HTML 이미지">
+                            </div>
                         </div>
-                        <h4>
-                            Java
-                        </h4>
+                        <h2 class="text">HTML</h2>
                     </div>
-                    <div class="content">
-                        <div class="img-box">
-                            <img src="./images/left.PNG" alt="Nodejs이미지">
+                    
+                    <div class="progress">
+                        <div class="percent">
+                            <svg>
+                                <circle cx="70" cy="70" r="70"></circle> 
+                                <circle cx="70" cy="70" r="70"></circle> 
+                            </svg>
+                            <div class="number">
+                                <h2>70<span>%</span></h2>
+                            </div>
+                            <div class="img-box">
+                                <img src="./images/css.png" alt="CSS 이미지">
+                            </div>
                         </div>
-                        <h4>
-                            Nodejs
-                        </h4>
+                        <h2 class="text">CSS</h2>
                     </div>
-                    <div class="content">
-                        <div class="img-box">
-                            <img src="./images/left.PNG" alt="MySQL이미지">
+                    <div class="progress">
+                        <div class="percent">
+                            <svg>
+                                <circle cx="70" cy="70" r="70"></circle> 
+                                <circle cx="70" cy="70" r="70"></circle> 
+                            </svg>
+                            <div class="number">
+                                <h2>70<span>%</span></h2>
+                            </div>
+                            <div class="img-box">
+                                <img src="./images/js.png" alt="JS 이미지">
+                            </div>
                         </div>
-                        <h4>
-                           MySQL
-                        </h4>
+                        <h2 class="text">JS</h2>
                     </div>
+                    <div class="progress">
+                        <div class="percent">
+                            <svg>
+                                <circle cx="70" cy="70" r="70"></circle> 
+                                <circle cx="70" cy="70" r="70"></circle> 
+                            </svg>
+                            <div class="number">
+                                <h2>70<span>%</span></h2>
+                            </div>
+                            <div class="img-box">
+                                <img src="./images/jquery.png" alt="jQuery 이미지">
+                            </div>
+                        </div>
+                        <h2 class="text">JQUERY</h2>
+                    </div>
+                    <div class="progress">
+                        <div class="percent">
+                            <svg>
+                                <circle cx="70" cy="70" r="70"></circle> 
+                                <circle cx="70" cy="70" r="70"></circle> 
+                            </svg>
+                            <div class="number">
+                                <h2>70<span>%</span></h2>
+                            </div>
+                            <div class="img-box">
+                                <img src="./images/React.png" alt="REACT 이미지">
+                            </div>
+                        </div>
+                        <h2 class="text">REACT</h2>
+                    </div>
+                    <div class="progress">
+                        <div class="percent">
+                            <svg>
+                                <circle cx="70" cy="70" r="70"></circle> 
+                                <circle cx="70" cy="70" r="70"></circle> 
+                            </svg>
+                            <div class="number">
+                                <h2>70<span>%</span></h2>
+                            </div>
+                            <div class="img-box">
+                                <img src="./images/nodejs.png" alt="NODE JS 이미지">
+                            </div>
+                        </div>
+                        <h2 class="text">NODE JS</h2>
+                    </div>
+                    <div class="progress">
+                        <div class="percent">
+                            <svg>
+                                <circle cx="70" cy="70" r="70"></circle> 
+                                <circle cx="70" cy="70" r="70"></circle> 
+                            </svg>
+                            <div class="number">
+                                <h2>70<span>%</span></h2>
+                            </div>
+                            <div class="img-box">
+                                <img src="./images/eclipse.png" alt="eclipse 이미지">
+                            </div>
+                        </div>
+                        <h2 class="text">eclipse</h2>
+                    </div>
+                    <div class="progress">
+                        <div class="percent">
+                            <svg>
+                                <circle cx="70" cy="70" r="70"></circle> 
+                                <circle cx="70" cy="70" r="70"></circle> 
+                            </svg>
+                            <div class="number">
+                                <h2>70<span>%</span></h2>
+                            </div>
+                            <div class="img-box">
+                                <img src="./images/mysql.png" alt="MYSQL 이미지">
+                            </div>
+                        </div>
+                        <h2 class="text">MYSQL</h2>
+                    </div>
+                    
 
                 </div>
-                <div class="contents portfolio">
+                <div class="contents portfolio horizontal-scroll-wrapper squares">
                     <div class="content">
                         <div class="img-box">
                             <img src="./images/left.PNG" alt="콘텐츠1">
@@ -416,5 +761,7 @@
             <div class="container"></div>
         </footer>
     </div>
+
+
 </body>
 </html>
