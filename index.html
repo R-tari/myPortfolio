@@ -10,6 +10,7 @@
     <style>
 
         /* 공통스타일 */
+      
         .wrap 
         {
             background-color: #fff;
@@ -21,7 +22,7 @@
         {
              width:100%;   
              max-width:2200px;
-             padding: 0 10%;
+             /* padding: 0 10%; */
             margin:0 auto;
         }
 
@@ -35,6 +36,7 @@
         {
             width:100%;
         }
+        
 
         /* 스킵메뉴 */
         .skip-menu a
@@ -57,7 +59,7 @@
         .header
         {
             position:relative;
-            z-index:2;
+            z-index:9999;
         }
         .header .container .contents 
         {
@@ -132,6 +134,12 @@
             color:rgb(231, 223, 223);
             font-size:5em;
             background-color:rgba(0,0,0,0.35)
+        }
+
+        .sec .container
+        {
+            overflow:hidden;
+            position:relative;
         }
 
         /* 프로필 스타일 */
@@ -363,9 +371,103 @@
 
         /* 포트폴리오 페이지 */
 
+
+
+        .slide-wrapper .content
+        {
+            width:100vw;
+            height:100vh;
+            position:relative;
+        }
+
+        .slide-wrapper .content h3,.slide-wrapper .content p,.slide-wrapper .content a
+        {
+            position:absolute;
+            z-index:7;
+        }
+
+        .slide-wrapper .content h3
+        {
+            left:2%;
+            top:75%;
+            font-size:2.5em;
+            background-color:rgba(255, 255, 255, 0.5);
+        }
+        .slide-wrapper .content p
+        {
+            left:2%;
+            top:85%;
+            font-size:1.5em;
+            background-color:rgba(255, 255, 255, 0.5);
+        }
+
+        .slide-wrapper .content a
+        {
+            left:2%;
+            top:70%;
+            font-size:1.5em;
+            background-color:rgba(255, 255, 255, 0.5);
+        }
+
+
+        .slide-wrapper .content .img-box
+        {
+            height:100%;
+            position:absolute;
+            left:0;
+            top:0;
+            right:0;
+            bottom:0;
+            z-index:6
+        }
+
+
+
+        .slide-wrapper
+        {
+            display:flex;
+            flex-direction: row;
+            width:500vw;
+            transform:rotate(90deg) translateY(-100vh);
+            transform-origin:top left;
+        }
         
+        .portfolio
+        {
+            width:100vh;
+            height:100vw;
+            transform:rotate(-90deg) translateX(-100vh);
+            transform-origin:top left;
+            overflow-y:scroll;
+            overflow-x:hidden;
+            scrollbar-width:none;
+            -ms-overflow-style: none;
+            margin-bottom:200px;
+            
+           
+        }
+        ::-webkit-scrollbar
+        {
+            display:none;
+        }
+
+
+
+        /* 컨텍트 스타일 */
+
+        
+
+
+        
+
+
     
 
+
+       
+        
+        
+        
 
       
 
@@ -634,112 +736,113 @@
                     
 
                 </div>
-                <div class="contents portfolio horizontal-scroll-wrapper squares">
-                    <div class="content">
-                        <div class="img-box">
-                            <img src="./images/left.PNG" alt="콘텐츠1">
-                        </div>
-                        <ul>
-                            <li>
-                                <h3>
-                                    웹 포트폴리오 콘텐츠1
-                                </h3>
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
-                            </li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?</li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?</li>
-                            <li>
-                                <a href="#">
-                                    웹페이지 바로가기
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="content">
-                        <div class="img-box">
-                            <img src="./images/left.PNG" alt="콘텐츠1">
-                        </div>
-                        <ul>
-                            <li>
+                <div class="contents portfolio">
+                    <div class="slide-wrapper">
+                            <div class="content">
+                                <div class="img-box">
+                                    <img src="./images/left.PNG" alt="콘텐츠1">
+                                </div>
+                                    <h3>
+                                        웹 포트폴리오 콘텐츠1
+                                    </h3>
+                                
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
+                                        <br>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
+                                        <br>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
+                                        <br>
+                                    </p>
+                                    <a href="#">
+                                        웹페이지 바로가기
+                                    </a>
+                                </div>
+                            <div class="content">
+                                <div class="img-box">
+                                    <img src="./images/left.PNG" alt="콘텐츠1">
+                                </div>
                                 <h3>
                                     웹 포트폴리오 콘텐츠2
                                 </h3>
-                            </li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?</li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?</li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?</li>
-                            <li>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
+                                    <br>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
+                                    <br>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
+                                    <br>
+                                </p>
                                 <a href="#">
                                     웹페이지 바로가기
                                 </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="content">
-                        <div class="img-box">
-                            <img src="./images/left.PNG" alt="콘텐츠1">
-                        </div>
-                        <ul>
-                            <li>
+                            </div>
+                            <div class="content">
+                                <div class="img-box">
+                                    <img src="./images/left.PNG" alt="콘텐츠1">
+                                </div>
                                 <h3>
                                     웹 포트폴리오 콘텐츠3
                                 </h3>
-                            </li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?</li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?</li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?</li>
-                            <li>
+                            
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
+                                    <br>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
+                                    <br>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
+                                    <br>
+                                </p>
                                 <a href="#">
                                     웹페이지 바로가기
                                 </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="content">
-                        <div class="img-box">
-                            <img src="./images/left.PNG" alt="콘텐츠1">
-                        </div>
-                        <ul>
-                            <li>
+                            </div>
+                            <div class="content">
+                                <div class="img-box">
+                                    <img src="./images/left.PNG" alt="콘텐츠1">
+                                </div>
                                 <h3>
                                     웹 포트폴리오 콘텐츠4
                                 </h3>
-                            </li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?</li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?</li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?</li>
-                            <li>
+                            
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
+                                    <br>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
+                                    <br>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
+                                    <br>
+                                </p>
                                 <a href="#">
                                     웹페이지 바로가기
                                 </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="content">
-                        <div class="img-box">
-                            <img src="./images/left.PNG" alt="콘텐츠1">
-                        </div>
-                        <ul>
-                            <li>
+                            </div>
+                            <div class="content">
+                                <div class="img-box">
+                                    <img src="./images/left.PNG" alt="콘텐츠1">
+                                </div>
                                 <h3>
                                     웹 포트폴리오 콘텐츠5
                                 </h3>
-                            </li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?</li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?</li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?</li>
-                            <li>
+                            
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
+                                    <br>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
+                                    <br>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
+                                    <br>
+                                </p>
                                 <a href="#">
                                     웹페이지 바로가기
                                 </a>
-                            </li>
-                        </ul>
+                            </div>
                     </div>
+               
                 </div>
                 <div class="contents contact">
                     <div class="container">
+                        <h3>CONTACT</h3>
                         <div class="content">
                             <div class="Email">
                                 rlaahrns96@naver.com
@@ -758,7 +861,11 @@
         </section>
 
         <footer>
-            <div class="container"></div>
+            <div class="container">
+                COPYRIGHT ⓒ 2022  김현기. ALL RIGHTS RESERVED.
+                본 사이트는 개인 포트폴리오 사이트로 제작되어 상업적 목적이 아닙니다.
+                사용된 일부 이미지 및 폰트 등은 별도의 출처가 있음을 밝혀 드립니다.
+            </div>
         </footer>
     </div>
 
