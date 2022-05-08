@@ -140,6 +140,7 @@
         {
             overflow:hidden;
             position:relative;
+            
         }
 
         /* 프로필 스타일 */
@@ -377,10 +378,10 @@
         {
             width:100vw;
             height:100vh;
-            position:relative;
         }
+        
 
-        .slide-wrapper .content h3,.slide-wrapper .content p,.slide-wrapper .content a
+        .slide-wrapper .content .img-box h3,.slide-wrapper .content .img-box p,.slide-wrapper .content .img-box a
         {
             position:absolute;
             z-index:7;
@@ -420,7 +421,15 @@
             bottom:0;
             z-index:6
         }
-
+        .slide-wrapper .content .img-box img
+        {
+            height:100%;
+            left:0;
+            top:0;
+            bottom:0;
+            right:0;
+            position:absolute;
+        }
 
 
         .slide-wrapper
@@ -434,15 +443,16 @@
         
         .portfolio
         {
-            width:100vh;
-            height:100vw;
+            width:100vw;
+            height:100vw ;
+            /* 높이 문제 */
             transform:rotate(-90deg) translateX(-100vh);
             transform-origin:top left;
             overflow-y:scroll;
             overflow-x:hidden;
             scrollbar-width:none;
             -ms-overflow-style: none;
-            margin-bottom:200px;
+          
             
            
         }
@@ -455,7 +465,10 @@
 
         /* 컨텍트 스타일 */
 
-        
+        .contact
+        {
+
+        }
 
 
         
@@ -741,7 +754,6 @@
                             <div class="content">
                                 <div class="img-box">
                                     <img src="./images/left.PNG" alt="콘텐츠1">
-                                </div>
                                     <h3>
                                         웹 포트폴리오 콘텐츠1
                                     </h3>
@@ -757,85 +769,87 @@
                                     <a href="#">
                                         웹페이지 바로가기
                                     </a>
-                                </div>
-                            <div class="content">
-                                <div class="img-box">
-                                    <img src="./images/left.PNG" alt="콘텐츠1">
-                                </div>
-                                <h3>
-                                    웹 포트폴리오 콘텐츠2
-                                </h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
-                                    <br>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
-                                    <br>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
-                                    <br>
-                                </p>
-                                <a href="#">
-                                    웹페이지 바로가기
-                                </a>
+                                </div>  
                             </div>
                             <div class="content">
                                 <div class="img-box">
                                     <img src="./images/left.PNG" alt="콘텐츠1">
+                                    <h3>
+                                        웹 포트폴리오 콘텐츠2
+                                    </h3>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
+                                        <br>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
+                                        <br>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
+                                        <br>
+                                    </p>
+                                    <a href="#">
+                                        웹페이지 바로가기
+                                    </a>
                                 </div>
-                                <h3>
-                                    웹 포트폴리오 콘텐츠3
-                                </h3>
-                            
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
-                                    <br>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
-                                    <br>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
-                                    <br>
-                                </p>
-                                <a href="#">
-                                    웹페이지 바로가기
-                                </a>
+                                
                             </div>
                             <div class="content">
                                 <div class="img-box">
                                     <img src="./images/left.PNG" alt="콘텐츠1">
+                                    <h3>
+                                        웹 포트폴리오 콘텐츠3
+                                    </h3>
+                                
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
+                                        <br>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
+                                        <br>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
+                                        <br>
+                                    </p>
+                                    <a href="#">
+                                        웹페이지 바로가기
+                                    </a>
                                 </div>
-                                <h3>
-                                    웹 포트폴리오 콘텐츠4
-                                </h3>
-                            
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
-                                    <br>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
-                                    <br>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
-                                    <br>
-                                </p>
-                                <a href="#">
-                                    웹페이지 바로가기
-                                </a>
                             </div>
                             <div class="content">
                                 <div class="img-box">
                                     <img src="./images/left.PNG" alt="콘텐츠1">
+                                    <h3>
+                                        웹 포트폴리오 콘텐츠4
+                                    </h3>
+                                
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
+                                        <br>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
+                                        <br>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
+                                        <br>
+                                    </p>
+                                    <a href="#">
+                                        웹페이지 바로가기
+                                    </a>
                                 </div>
-                                <h3>
-                                    웹 포트폴리오 콘텐츠5
-                                </h3>
-                            
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
-                                    <br>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
-                                    <br>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
-                                    <br>
-                                </p>
-                                <a href="#">
-                                    웹페이지 바로가기
-                                </a>
+                            </div>
+                            <div class="content">
+                                <div class="img-box">
+                                    <img src="./images/left.PNG" alt="콘텐츠1">
+                                    <h3>
+                                        웹 포트폴리오 콘텐츠5
+                                    </h3>
+                                
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
+                                        <br>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
+                                        <br>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
+                                        <br>
+                                    </p>
+                                    <a href="#">
+                                        웹페이지 바로가기
+                                    </a>
+                                </div>
                             </div>
                     </div>
                
