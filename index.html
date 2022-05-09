@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./reset.css">
     <title>Kim Hyunki's Portfolio</title>
-
+    
     <style>
-
+        
         /* 공통스타일 */
       
         .wrap 
@@ -208,6 +208,12 @@
         
        
 
+        .profile-text p:nth-child(3)
+        {
+            display:flex; 
+            flex-flow:row 
+        }
+
         .profile-text :nth-child(5)
         {
             display:flex;
@@ -371,7 +377,7 @@
 
 
         /* 포트폴리오 페이지 */
-
+        
 
 
         .slide-wrapper .content
@@ -443,9 +449,9 @@
         
         .portfolio
         {
-            width:100vw;
+            width:100vh;
             height:100vw ;
-            /* 높이 문제 */
+           
             transform:rotate(-90deg) translateX(-100vh);
             transform-origin:top left;
             overflow-y:scroll;
@@ -465,9 +471,76 @@
 
         /* 컨텍트 스타일 */
 
-        .contact
+        .contact 
         {
+            padding:0 5%;
+            margin-bottom:200px;
+        }
+        .contact .container .content div:nth-child(1),
+        .contact .container .content div:nth-child(2)
+        {
+            margin-bottom:100px;
+        }
+        .contact .kakao
+        {
+            float:right;
+            margin-left:65%;
+            width:35%;
+        }
 
+        .contact .container h3
+        {
+            margin-bottom:100px;
+            font-size:1.5em;
+            
+        }
+
+        .contact .container h4
+        {
+            font-size:1.3em;
+        }
+
+        .kakao h4,.Email h4
+        {
+            margin-bottom:50px;
+        }
+
+        .Email p
+        {
+            font-size:1em;
+            font-weight:700;
+        }
+
+        .github
+        {
+            display:flex;
+            flex-flow:column nowrap;
+            width:35%;
+            text-align:center;
+        }
+
+        .github .img-box
+        {
+            margin-bottom:0px !important;;
+        }
+
+        .github address a
+        {
+            display:inline-block;
+            color:#000;
+            font-size:1em;
+            font-weight:700;
+        }
+
+
+
+        /* 푸터 스타일 */
+
+        footer .container
+        {
+            font-size:0.7em;
+            font-weight:300;
+            text-align: center;;
         }
 
 
@@ -749,135 +822,158 @@
                     
 
                 </div>
-                <div class="contents portfolio">
-                    <div class="slide-wrapper">
-                            <div class="content">
-                                <div class="img-box">
-                                    <img src="./images/left.PNG" alt="콘텐츠1">
-                                    <h3>
-                                        웹 포트폴리오 콘텐츠1
-                                    </h3>
-                                
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
-                                        <br>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
-                                        <br>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
-                                        <br>
-                                    </p>
-                                    <a href="#">
-                                        웹페이지 바로가기
-                                    </a>
-                                </div>  
-                            </div>
-                            <div class="content">
-                                <div class="img-box">
-                                    <img src="./images/left.PNG" alt="콘텐츠1">
-                                    <h3>
-                                        웹 포트폴리오 콘텐츠2
-                                    </h3>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
-                                        <br>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
-                                        <br>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
-                                        <br>
-                                    </p>
-                                    <a href="#">
-                                        웹페이지 바로가기
-                                    </a>
+                <div class="par-protfolio" style="height:100vh;overflow:hidden;margin-bottom:200px">
+                    <div class="contents portfolio">
+                        <div class="slide-wrapper">
+                                <div class="content">
+                                    <div class="img-box">
+                                        <img src="./images/left.PNG" alt="콘텐츠1">
+                                        <h3>
+                                            웹 포트폴리오 콘텐츠1
+                                        </h3>
+                                    
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
+                                            <br>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
+                                            <br>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
+                                            <br>
+                                        </p>
+                                        <a href="#">
+                                            웹페이지 바로가기
+                                        </a>
+                                    </div>  
                                 </div>
-                                
-                            </div>
-                            <div class="content">
-                                <div class="img-box">
-                                    <img src="./images/left.PNG" alt="콘텐츠1">
-                                    <h3>
-                                        웹 포트폴리오 콘텐츠3
-                                    </h3>
-                                
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
-                                        <br>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
-                                        <br>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
-                                        <br>
-                                    </p>
-                                    <a href="#">
-                                        웹페이지 바로가기
-                                    </a>
+                                <div class="content">
+                                    <div class="img-box">
+                                        <img src="./images/left.PNG" alt="콘텐츠1">
+                                        <h3>
+                                            웹 포트폴리오 콘텐츠2
+                                        </h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
+                                            <br>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
+                                            <br>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
+                                            <br>
+                                        </p>
+                                        <a href="#">
+                                            웹페이지 바로가기
+                                        </a>
+                                    </div>
+                                    
                                 </div>
-                            </div>
-                            <div class="content">
-                                <div class="img-box">
-                                    <img src="./images/left.PNG" alt="콘텐츠1">
-                                    <h3>
-                                        웹 포트폴리오 콘텐츠4
-                                    </h3>
-                                
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
-                                        <br>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
-                                        <br>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
-                                        <br>
-                                    </p>
-                                    <a href="#">
-                                        웹페이지 바로가기
-                                    </a>
+                                <div class="content">
+                                    <div class="img-box">
+                                        <img src="./images/left.PNG" alt="콘텐츠1">
+                                        <h3>
+                                            웹 포트폴리오 콘텐츠3
+                                        </h3>
+                                    
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
+                                            <br>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
+                                            <br>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
+                                            <br>
+                                        </p>
+                                        <a href="#">
+                                            웹페이지 바로가기
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="content">
-                                <div class="img-box">
-                                    <img src="./images/left.PNG" alt="콘텐츠1">
-                                    <h3>
-                                        웹 포트폴리오 콘텐츠5
-                                    </h3>
-                                
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
-                                        <br>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
-                                        <br>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
-                                        <br>
-                                    </p>
-                                    <a href="#">
-                                        웹페이지 바로가기
-                                    </a>
+                                <div class="content">
+                                    <div class="img-box">
+                                        <img src="./images/left.PNG" alt="콘텐츠1">
+                                        <h3>
+                                            웹 포트폴리오 콘텐츠4
+                                        </h3>
+                                    
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
+                                            <br>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
+                                            <br>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
+                                            <br>
+                                        </p>
+                                        <a href="#">
+                                            웹페이지 바로가기
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
+                                <div class="content">
+                                    <div class="img-box">
+                                        <img src="./images/left.PNG" alt="콘텐츠1">
+                                        <h3>
+                                            웹 포트폴리오 콘텐츠5
+                                        </h3>
+                                    
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
+                                            <br>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
+                                            <br>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas?
+                                            <br>
+                                        </p>
+                                        <a href="#">
+                                            웹페이지 바로가기
+                                        </a>
+                                    </div>
+                                </div>
+                        </div>                
                     </div>
-               
                 </div>
                 <div class="contents contact">
                     <div class="container">
                         <h3>CONTACT</h3>
-                        <div class="content">
+                        <div class="content clearfix">
                             <div class="Email">
-                                rlaahrns96@naver.com
+                                <h4>EMAIL</h4>
+                                <p>
+                                    rlaahrns96@naver.com
+                                </p>
                             </div>
                             <div class="kakao">
-                                Openkakao
+                                <h4>KAKAO TALK</h4>
+                                <div class="img-box">
+                                    <img src="./images/KakaoTalk_20220507_002245310.png" alt="openkakao">
+                                </div>
                             </div>
-                            <div class="githun">
-                                github
+                            <div class="github">
+                                <h4>GIT HUB</h4>
+                                <div class="img-box">
+                                    <a href="https://github.com/R-tari">
+                                        <img src="./images/github.png" alt="">
+                                    </a>
+                                </div>
+                                <address>
+                                    <a href="https://github.com/R-tari">바로가기</a>
+                                </address>
+                               
+                                
                             </div>
                         </div>
                     </div>
                 </div>
+              
             </div>
 
         </section>
 
+
+     
+
         <footer>
             <div class="container">
                 COPYRIGHT ⓒ 2022  김현기. ALL RIGHTS RESERVED.
+                <br>
                 본 사이트는 개인 포트폴리오 사이트로 제작되어 상업적 목적이 아닙니다.
+                <br>
                 사용된 일부 이미지 및 폰트 등은 별도의 출처가 있음을 밝혀 드립니다.
             </div>
         </footer>
