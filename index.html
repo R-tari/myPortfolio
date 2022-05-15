@@ -69,7 +69,7 @@
             top:0;
             display:flex;
             flex-flow:row nowrap;
-            justify-content:space-between;
+            justify-content:space-around;
             align-items:center;
             padding:10px 50px;
             font-size:1.2em;
@@ -82,16 +82,17 @@
             line-height:200%;
         }
       
+
+        
+
         .main-nav
         {
-           
             width:30%;
             top:0%;
             left:0%;
             transform:translate(-50% -50%);
             font-weight:700;
            
-        
         }
         .main-nav ul
         {
@@ -99,12 +100,48 @@
             flex-flow:row nowrap;
             justify-content:space-around;
             align-items: center;
-            
         }
         .main-nav ul li
         {
             margin-right:20px;
         }
+
+
+
+
+        .m-nav
+        {
+            width:30px;
+            height:26px;
+            display:none;
+            cursor:pointer;
+           
+        }
+
+
+        .m-nav::before,.m-nav::after
+        {
+            content:'';
+            width:30px;
+            height:3px;
+            display:block;
+            background-color:#000;
+            border-radius: 2px;
+        }
+
+        .nav-btn
+        {
+            width:30px;
+            height:3px;
+            background-color:#000;
+            text-indent: -9999px;
+            border-radius: 2px;
+
+        } 
+
+     
+        
+        
         
         
         
@@ -168,12 +205,12 @@
         .profile .img-box
         {
             margin:0 auto;
-            width:70%;
-            height:60%;
+            width:85%;
+            height:100%;
              border-radius: 5px;
              overflow: hidden;
             box-shadow: 5px 5px  70px rgb(185, 181, 177)  ;
-            padding-top:calc(50%/1*1);
+            
         }
 
    
@@ -194,6 +231,7 @@
             line-height:2em;
             display:grid;
             grid-template-columns: repeat(2, 1fr);
+            grid-row-gap: 30px;
         }
 
         .profile span
@@ -475,6 +513,7 @@
         {
             padding:0 5%;
             margin-bottom:200px;
+            font-size:1.5em
         }
         .contact .container .content div:nth-child(1),
         .contact .container .content div:nth-child(2)
@@ -484,9 +523,20 @@
         .contact .kakao
         {
             float:right;
-            margin-left:65%;
-            width:35%;
+            
+            width:50%;
         }
+
+        .contact .kakao h4
+        {
+            text-align:right;
+        }
+
+        .contact .kakao .img-box
+        {
+            margin-right:30%;
+        }
+        
 
         .contact .container h3
         {
@@ -509,19 +559,25 @@
         {
             font-size:1em;
             font-weight:700;
+            margin-left:10%;
         }
 
         .github
         {
             display:flex;
             flex-flow:column nowrap;
-            width:35%;
+            width:70%;
             text-align:center;
         }
 
         .github .img-box
         {
-            margin-bottom:0px !important;;
+            margin-left:30%;
+            margin-bottom:0px !important;
+        }
+        .github h4
+        {
+            text-align: left;
         }
 
         .github address a
@@ -547,7 +603,168 @@
         
 
 
-    
+        
+        /* 해상도 900이하일 시  */
+
+        @media (max-width:900px)
+        {
+
+            /* 헤더 스타일 */
+            .header .container .contents 
+            {
+                justify-content: space-between;
+            }
+            .m-nav
+            {
+                display:flex;
+                flex-flow:column nowrap;
+                justify-content: space-between;
+                z-index: 6;
+            }
+
+            .m-nav-active::before,.m-nav-active::after,.m-nav-active .nav-btn
+            {
+                display:flex;
+                flex-flow:column nowrap;
+                justify-content: space-between;
+                z-index: 6;
+                background-color: #fff;
+            }
+
+       
+
+             .main-nav
+            {
+                position:fixed;
+                left:100%;
+                top:0;
+                right:-100%;
+                bottom:0;
+                width:100%;
+                transition:0.3s;
+                z-index:5;
+                
+            } 
+            .main-nav ul
+            {
+                display:none;
+            }
+
+
+            
+            .main-nav-active
+            {
+                position:fixed;
+                left:65%;
+                top:0;
+                right:0%;
+                bottom:0;
+                width:35%;
+                background-color: rgba(0, 0, 0,0.3);
+                transition:0.3s;
+            }
+
+            .main-nav-active ul
+            {
+                
+                height:100%;
+                display:flex;
+                flex-flow:column nowrap;
+                justify-content: space-around;
+                align-items: center;
+                padding:150px 0;
+            }
+
+                .main-nav-active ul li
+            {
+                margin-right:0px;
+               
+            }
+
+            .main-nav-active ul li a
+            {
+                color:#fff;
+            }
+
+
+            /* 프로필 스타일 */
+
+            .profile .content
+            {
+                grid-template-columns:1fr ;
+                
+            }
+
+            .profile-text
+            {
+                margin-left:50px;
+            }
+            .profile .img-box
+            {
+                height:70%;
+            }
+
+
+
+        }
+
+
+
+
+
+
+
+        @media (max-width:700px)
+        {
+            /* 메인 홈 스타일 */
+            #background h2
+            {
+                font-size:3em;
+                transform:translate(-20%,-50%);
+            }
+            /* 프로필 스타일 */
+            .profile-text 
+            {
+                display: flex;
+                flex-flow: column nowrap;
+                margin-left:50px;
+            }
+            .profile-text p
+            {
+                margin-bottom:30px;
+                font-size:1.5em;
+            }
+            .profile-text p span
+            {
+                font-size:1.5em;
+                width:215px;
+            }
+
+            /* 스킬 스타일 */
+
+            .skills
+            {
+                grid-template-columns: repeat(2,1fr);
+            }
+            
+        }
+
+        @media (max-width:535px)
+        {
+            /* 프로필 스타일 */
+            .profile-text p
+            {
+                display:flex;
+                flex-flow:column nowrap !important;
+                text-align:center;
+            }
+            .profile-text p span
+            {
+                margin-bottom:20px;
+            }
+            
+        }
+
 
 
        
@@ -590,27 +807,31 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="#profile">
                                     Profile
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="#skills">
                                     skills
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="#portfolio">
                                     Portfolio
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="#contact">
                                     contact
                                 </a>
                             </li>
                         </ul>
-                    </nav>                   
+                    </nav>       
+
+                    <div class="m-nav">
+                        <div class="nav-btn">네비</div>
+                    </div>
                     
                 </div>
             </div>
@@ -629,7 +850,7 @@
 
         <section class="sec">
             <div class="container">
-                <div class="contents profile">
+                <div class="contents profile" id="profile">
                     <div class="profile-title">
                         <h3>
                             About Me
@@ -696,7 +917,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="contents skills">
+                <div class="contents skills" id="skills">
 
                     <div class="progress">
                         <div class="percent">
@@ -823,7 +1044,7 @@
 
                 </div>
                 <div class="par-protfolio" style="height:100vh;overflow:hidden;margin-bottom:200px">
-                    <div class="contents portfolio">
+                    <div class="contents portfolio" id="portfolio">
                         <div class="slide-wrapper">
                                 <div class="content">
                                     <div class="img-box">
@@ -928,7 +1149,7 @@
                         </div>                
                     </div>
                 </div>
-                <div class="contents contact">
+                <div class="contents contact" id="contact">
                     <div class="container">
                         <h3>CONTACT</h3>
                         <div class="content clearfix">
@@ -979,6 +1200,19 @@
         </footer>
     </div>
 
+
+    <script>
+        let btnNav=document.querySelector('.m-nav');
+        let MainNav=document.querySelector('.main-nav');
+
+        btnNav.addEventListener('click',function()
+        {
+            MainNav.classList.toggle('main-nav-active');
+            btnNav.classList.toggle('m-nav-active');
+
+        })
+    </script>
+    
 
 </body>
 </html>
