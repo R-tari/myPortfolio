@@ -1205,6 +1205,12 @@
         let btnNav=document.querySelector('.m-nav');
         let MainNav=document.querySelector('.main-nav');
 
+        window.addEventListener('scroll',function()
+        {
+            console.log(scrollY);
+        })
+        
+
         btnNav.addEventListener('click',function()
         {
             MainNav.classList.toggle('main-nav-active');
