@@ -334,8 +334,9 @@
 
         .progress .percent svg circle:nth-child(2)
         {
-            stroke-dashoffset: calc(440 - (440*70)/100);
+            stroke-dashoffset: calc(440 - (440*0)/100);
             stroke:#03a9f4;
+            transition:0.5s;
         }
         .progress .percent .number
         {
@@ -351,6 +352,7 @@
             z-index:2;
 
             opacity:0; 
+            transition: 0.3s;
             /* 마우스 오버시 보이도록 */
         }
         
@@ -923,7 +925,7 @@
                         <div class="percent">
                             <svg>
                                 <circle cx="70" cy="70" r="70"></circle> 
-                                <circle cx="70" cy="70" r="70"></circle> 
+                                <circle id="html" cx="70" cy="70" r="70"></circle> 
                             </svg>
                             <div class="number">
                                 <h2>70<span>%</span></h2>
@@ -939,10 +941,10 @@
                         <div class="percent">
                             <svg>
                                 <circle cx="70" cy="70" r="70"></circle> 
-                                <circle cx="70" cy="70" r="70"></circle> 
+                                <circle id="css" cx="70" cy="70" r="70"></circle> 
                             </svg>
                             <div class="number">
-                                <h2>70<span>%</span></h2>
+                                <h2>75<span>%</span></h2>
                             </div>
                             <div class="img-box">
                                 <img src="./images/css.png" alt="CSS 이미지">
@@ -954,10 +956,10 @@
                         <div class="percent">
                             <svg>
                                 <circle cx="70" cy="70" r="70"></circle> 
-                                <circle cx="70" cy="70" r="70"></circle> 
+                                <circle id="js" cx="70" cy="70" r="70"></circle> 
                             </svg>
                             <div class="number">
-                                <h2>70<span>%</span></h2>
+                                <h2>75<span>%</span></h2>
                             </div>
                             <div class="img-box">
                                 <img src="./images/js.png" alt="JS 이미지">
@@ -969,10 +971,10 @@
                         <div class="percent">
                             <svg>
                                 <circle cx="70" cy="70" r="70"></circle> 
-                                <circle cx="70" cy="70" r="70"></circle> 
+                                <circle id="jquery" cx="70" cy="70" r="70"></circle> 
                             </svg>
                             <div class="number">
-                                <h2>70<span>%</span></h2>
+                                <h2>65<span>%</span></h2>
                             </div>
                             <div class="img-box">
                                 <img src="./images/jquery.png" alt="jQuery 이미지">
@@ -984,10 +986,10 @@
                         <div class="percent">
                             <svg>
                                 <circle cx="70" cy="70" r="70"></circle> 
-                                <circle cx="70" cy="70" r="70"></circle> 
+                                <circle id="react" cx="70" cy="70" r="70"></circle> 
                             </svg>
                             <div class="number">
-                                <h2>70<span>%</span></h2>
+                                <h2>65<span>%</span></h2>
                             </div>
                             <div class="img-box">
                                 <img src="./images/React.png" alt="REACT 이미지">
@@ -999,10 +1001,10 @@
                         <div class="percent">
                             <svg>
                                 <circle cx="70" cy="70" r="70"></circle> 
-                                <circle cx="70" cy="70" r="70"></circle> 
+                                <circle id="nodejs" cx="70" cy="70" r="70"></circle> 
                             </svg>
                             <div class="number">
-                                <h2>70<span>%</span></h2>
+                                <h2>60<span>%</span></h2>
                             </div>
                             <div class="img-box">
                                 <img src="./images/nodejs.png" alt="NODE JS 이미지">
@@ -1014,10 +1016,10 @@
                         <div class="percent">
                             <svg>
                                 <circle cx="70" cy="70" r="70"></circle> 
-                                <circle cx="70" cy="70" r="70"></circle> 
+                                <circle id="eclipes" cx="70" cy="70" r="70"></circle> 
                             </svg>
                             <div class="number">
-                                <h2>70<span>%</span></h2>
+                                <h2>60<span>%</span></h2>
                             </div>
                             <div class="img-box">
                                 <img src="./images/eclipse.png" alt="eclipse 이미지">
@@ -1029,10 +1031,10 @@
                         <div class="percent">
                             <svg>
                                 <circle cx="70" cy="70" r="70"></circle> 
-                                <circle cx="70" cy="70" r="70"></circle> 
+                                <circle id="mysql" cx="70" cy="70" r="70"></circle> 
                             </svg>
                             <div class="number">
-                                <h2>70<span>%</span></h2>
+                                <h2>75<span>%</span></h2>
                             </div>
                             <div class="img-box">
                                 <img src="./images/mysql.png" alt="MYSQL 이미지">
@@ -1186,9 +1188,6 @@
 
         </section>
 
-
-     
-
         <footer>
             <div class="container">
                 COPYRIGHT ⓒ 2022  김현기. ALL RIGHTS RESERVED.
@@ -1207,18 +1206,178 @@
 
         window.addEventListener('scroll',function()
         {
-            console.log(scrollY);
+
+            
+            let scrollVal=document.documentElement.scrollTop;
+            let skillsTop=document.querySelector('#skills');
+            let percentage=document.getElementsByClassName('number');
+            let skillHtml=document.getElementById('html');
+            let skillCss=document.getElementById('css');
+            let skillJs=document.getElementById('js');
+            let skillJquery=document.getElementById('jquery');
+            let skillReact=document.getElementById('react');
+            let skillNodejs=document.getElementById('nodejs');
+            let skillEclipes=document.getElementById('eclipes');
+            let skillMysql=document.getElementById('mysql');
+            
+            console.log('scrollVal '+scrollVal);
+
+            // 위치에 따른 이벤트 주기
+
+            if(screen.width<535)
+            {
+                if(2240<scrollVal && 4608>scrollVal)
+                {
+                    for(let i=0;i<percentage.length;i++)
+                    {
+                        // conosle.log(percentage[i]);
+                        percentage[i].style.opacity='1';
+                        skillHtml.style.strokeDashoffset='calc(440 - (440*70)/100)';
+                        skillCss.style.strokeDashoffset='calc(440 - (440*75)/100)';
+                        skillJs.style.strokeDashoffset='calc(440 - (440*75)/100)';
+                        skillJquery.style.strokeDashoffset='calc(440 - (440*65)/100)';
+                        skillReact.style.strokeDashoffset='calc(440 - (440*65)/100)';
+                        skillNodejs.style.strokeDashoffset='calc(440 - (440*60)/100)';
+                        skillEclipes.style.strokeDashoffset='calc(440 - (440*60)/100)';
+                        skillMysql.style.strokeDashoffset='calc(440 - (440*75)/100)';
+                    } 
+                }
+                else
+                {
+                    for(let i=0;i<percentage.length;i++)
+                    {
+                        // conosle.log(percentage[i]);
+                        percentage[i].style.opacity='0'
+                        skillHtml.style.strokeDashoffset='calc(440 - (440*0)/100)';
+                        skillCss.style.strokeDashoffset='calc(440 - (440*0)/100)';
+                        skillJs.style.strokeDashoffset='calc(440 - (440*0)/100)';
+                        skillJquery.style.strokeDashoffset='calc(440 - (440*0)/100)';
+                        skillReact.style.strokeDashoffset='calc(440 - (440*0)/100)';
+                        skillNodejs.style.strokeDashoffset='calc(440 - (440*0)/100)';
+                        skillEclipes.style.strokeDashoffset='calc(440 - (440*0)/100)';
+                        skillMysql.style.strokeDashoffset='calc(440 - (440*0)/100)';
+                    }
+                }
+            }
+
+            if(screen.width>534 && screen.width<701)
+            {
+                if(2252<scrollVal && 4352>scrollVal)
+                {
+                    for(let i=0;i<percentage.length;i++)
+                    {
+                        // conosle.log(percentage[i]);
+                        percentage[i].style.opacity='1';
+                        skillHtml.style.strokeDashoffset='calc(440 - (440*70)/100)';
+                        skillCss.style.strokeDashoffset='calc(440 - (440*75)/100)';
+                        skillJs.style.strokeDashoffset='calc(440 - (440*75)/100)';
+                        skillJquery.style.strokeDashoffset='calc(440 - (440*65)/100)';
+                        skillReact.style.strokeDashoffset='calc(440 - (440*65)/100)';
+                        skillNodejs.style.strokeDashoffset='calc(440 - (440*60)/100)';
+                        skillEclipes.style.strokeDashoffset='calc(440 - (440*60)/100)';
+                        skillMysql.style.strokeDashoffset='calc(440 - (440*75)/100)';
+                    } 
+                }
+                else
+                {
+                    for(let i=0;i<percentage.length;i++)
+                    {
+                        // conosle.log(percentage[i]);
+                        percentage[i].style.opacity='0'
+                        skillHtml.style.strokeDashoffset='calc(440 - (440*0)/100)';
+                        skillCss.style.strokeDashoffset='calc(440 - (440*0)/100)';
+                        skillJs.style.strokeDashoffset='calc(440 - (440*0)/100)';
+                        skillJquery.style.strokeDashoffset='calc(440 - (440*0)/100)';
+                        skillReact.style.strokeDashoffset='calc(440 - (440*0)/100)';
+                        skillNodejs.style.strokeDashoffset='calc(440 - (440*0)/100)';
+                        skillEclipes.style.strokeDashoffset='calc(440 - (440*0)/100)';
+                        skillMysql.style.strokeDashoffset='calc(440 - (440*0)/100)';
+                    }
+                }
+            }
+
+            if(screen.width>700 && screen.width<901)
+            {
+                if(1773<scrollVal && 3300>scrollVal)
+                {
+                    for(let i=0;i<percentage.length;i++)
+                    {
+                        // conosle.log(percentage[i]);
+                        percentage[i].style.opacity='1';
+                        skillHtml.style.strokeDashoffset='calc(440 - (440*70)/100)';
+                        skillCss.style.strokeDashoffset='calc(440 - (440*75)/100)';
+                        skillJs.style.strokeDashoffset='calc(440 - (440*75)/100)';
+                        skillJquery.style.strokeDashoffset='calc(440 - (440*65)/100)';
+                        skillReact.style.strokeDashoffset='calc(440 - (440*65)/100)';
+                        skillNodejs.style.strokeDashoffset='calc(440 - (440*60)/100)';
+                        skillEclipes.style.strokeDashoffset='calc(440 - (440*60)/100)';
+                        skillMysql.style.strokeDashoffset='calc(440 - (440*75)/100)';
+                    } 
+                }
+                else
+                {
+                    for(let i=0;i<percentage.length;i++)
+                    {
+                        // conosle.log(percentage[i]);
+                        percentage[i].style.opacity='0'
+                        skillHtml.style.strokeDashoffset='calc(440 - (440*0)/100)';
+                        skillCss.style.strokeDashoffset='calc(440 - (440*0)/100)';
+                        skillJs.style.strokeDashoffset='calc(440 - (440*0)/100)';
+                        skillJquery.style.strokeDashoffset='calc(440 - (440*0)/100)';
+                        skillReact.style.strokeDashoffset='calc(440 - (440*0)/100)';
+                        skillNodejs.style.strokeDashoffset='calc(440 - (440*0)/100)';
+                        skillEclipes.style.strokeDashoffset='calc(440 - (440*0)/100)';
+                        skillMysql.style.strokeDashoffset='calc(440 - (440*0)/100)';
+                    }
+                }
+            }
+            if(screen.width>900)
+            {
+                if(1192<scrollVal)
+                {
+                    for(let i=0;i<percentage.length;i++)
+                    {
+                        // conosle.log(percentage[i]);
+                        percentage[i].style.opacity='1';
+                        skillHtml.style.strokeDashoffset='calc(440 - (440*70)/100)';
+                        skillCss.style.strokeDashoffset='calc(440 - (440*75)/100)';
+                        skillJs.style.strokeDashoffset='calc(440 - (440*75)/100)';
+                        skillJquery.style.strokeDashoffset='calc(440 - (440*65)/100)';
+                        skillReact.style.strokeDashoffset='calc(440 - (440*65)/100)';
+                        skillNodejs.style.strokeDashoffset='calc(440 - (440*60)/100)';
+                        skillEclipes.style.strokeDashoffset='calc(440 - (440*60)/100)';
+                        skillMysql.style.strokeDashoffset='calc(440 - (440*75)/100)';
+                    }                }
+                else
+                {
+                    for(let i=0;i<percentage.length;i++)
+                    {
+                        // conosle.log(percentage[i]);
+                        percentage[i].style.opacity='0'
+                        skillHtml.style.strokeDashoffset='calc(440 - (440*0)/100)';
+                        skillCss.style.strokeDashoffset='calc(440 - (440*0)/100)';
+                        skillJs.style.strokeDashoffset='calc(440 - (440*0)/100)';
+                        skillJquery.style.strokeDashoffset='calc(440 - (440*0)/100)';
+                        skillReact.style.strokeDashoffset='calc(440 - (440*0)/100)';
+                        skillNodejs.style.strokeDashoffset='calc(440 - (440*0)/100)';
+                        skillEclipes.style.strokeDashoffset='calc(440 - (440*0)/100)';
+                        skillMysql.style.strokeDashoffset='calc(440 - (440*0)/100)';
+                    }
+                }
+            }
+            
         })
+        
         
 
         btnNav.addEventListener('click',function()
         {
             MainNav.classList.toggle('main-nav-active');
             btnNav.classList.toggle('m-nav-active');
-
+                    
         })
     </script>
     
 
 </body>
-</html>
+</html>   
