@@ -1,13 +1,16 @@
 
 
 /* 공통스타일 */
-
+:root
+{
+    scroll-behavior: smooth;
+}
 .wrap 
 {
     background-color: #fff;
     font-size:16px;
     overflow: hidden;
-    scroll-behavior: smooth;
+    
     
 }
 .container
@@ -418,36 +421,58 @@ img
     width:100vw;
     height:100vh;
 }
-
-
-.slide-wrapper .content .img-box h3,.slide-wrapper .content .img-box p,.slide-wrapper .content .img-box a
+.slide-wrapper .content .img-box .txt-box
 {
     position:absolute;
     z-index:7;
 }
 
+.slide-wrapper .content .txt-box 
+{
+    left: 8%;
+    bottom:10%;
+
+}
 .slide-wrapper .content h3
 {
-    left:2%;
-    top:75%;
+    width:260px;
+    text-align:center;
+   margin-bottom:20px;
     font-size:2.5em;
-    background-color:rgba(255, 255, 255, 0.5);
+    color:#ddd;
+    border-radius:5px;
+    padding:10px;
+    background-color:rgba(0,0,0,0.5);
 }
 .slide-wrapper .content p
 {
-    left:2%;
-    top:85%;
+  
     font-size:1.5em;
-    background-color:rgba(255, 255, 255, 0.5);
+    color:#ddd;
+    background-color:rgba(0,0,0,0.5);
+    border-radius:5px;
+    line-height:2em;
+    padding:10px;
+    margin-bottom:50px;
 }
 
 .slide-wrapper .content a
 {
-    left:2%;
-    top:70%;
+    font-weight:600;
     font-size:1.5em;
-    background-color:rgba(255, 255, 255, 0.5);
+    color:#eee;
+    background-color:rgb(0,0,0);
+    padding:20px 30px;
+
+    border-radius:20px;
 }
+.slide-wrapper .content a:hover
+{
+    background-color: rgb(255,255,255);
+    border:1px solid black;
+    color:#000;
+}
+
 
 
 .slide-wrapper .content .img-box
@@ -475,7 +500,7 @@ img
 {
     display:flex;
     flex-direction: row;
-    width:500vw;
+    width:200vw;
     transform:rotate(90deg) translateY(-100vh);
     transform-origin:top left;
 }
@@ -629,8 +654,24 @@ footer .container
 
 
 
-
-
+@media (max-width:1100px)
+{
+    .slide-wrapper .content .txt-box 
+    {
+       
+        left:5%;
+        right:5%;
+    }
+    .slide-wrapper .content .txt-box h3
+    {
+        width:225px;
+        font-size:2em;
+    }
+    .slide-wrapper .content .txt-box p
+    {
+        font-size:1.2em;
+    }
+}
 /* 해상도 900이하일 시  */
 
 @media (max-width:900px)
@@ -731,6 +772,11 @@ footer .container
         height:70%;
     }
 
+    .slide-wrapper .content .txt-box 
+    {
+        left:5%;
+        right:5%;
+    }
 
 
 }

@@ -169,7 +169,7 @@ portfolio.addEventListener('scroll',function()
     let portfolioY=portfolio.scrollTop;
     let portDot=document.getElementsByClassName('dot');
 
-    if(portfolioY / (window.innerWidth * 5) * 100 <= 20)
+    if(portfolioY / (window.innerWidth * 2) * 100 <= 20)
     {
         for(i=0;i<portDot.length;i++)
         {
@@ -178,8 +178,8 @@ portfolio.addEventListener('scroll',function()
         }
     }
 
-    else if(portfolioY / (window.innerWidth * 5) * 100 >20 &&
-            portfolioY / (window.innerWidth * 5) * 100 <= 40)
+    else if(portfolioY / (window.innerWidth * 2) * 100 >20 &&
+            portfolioY / (window.innerWidth * 2) * 100 <= 40)
     {
         for(i=0;i<portDot.length;i++)
         {
