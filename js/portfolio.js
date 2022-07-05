@@ -169,7 +169,7 @@ portfolio.addEventListener('scroll',function()
     let portfolioY=portfolio.scrollTop;
     let portDot=document.getElementsByClassName('dot');
 
-    if(portfolioY / (window.innerWidth * 2) * 100 <= 20)
+    if(portfolioY / (window.innerWidth * 2) * 100 <= 25)
     {
         for(i=0;i<portDot.length;i++)
         {
@@ -178,8 +178,8 @@ portfolio.addEventListener('scroll',function()
         }
     }
 
-    else if(portfolioY / (window.innerWidth * 2) * 100 >20 &&
-            portfolioY / (window.innerWidth * 2) * 100 <= 40)
+    else if(portfolioY / (window.innerWidth * 2) * 100 >25 &&
+            portfolioY / (window.innerWidth * 2) * 100 <= 50)
     {
         for(i=0;i<portDot.length;i++)
         {
@@ -189,41 +189,40 @@ portfolio.addEventListener('scroll',function()
         
     }
 
-    else if(portfolioY / (window.innerWidth * 5) * 100 >40 &&
-            portfolioY / (window.innerWidth * 5) * 100 <= 60)
-    {
-        for(i=0;i<portDot.length;i++)
-        {
-            portDot[i].style.backgroundColor='white';
-            portDot[2].style.backgroundColor='black';
-        }
+    // else if(portfolioY / (window.innerWidth * 5) * 100 >40 &&
+    //         portfolioY / (window.innerWidth * 5) * 100 <= 60)
+    // {
+    //     for(i=0;i<portDot.length;i++)
+    //     {
+    //         portDot[i].style.backgroundColor='white';
+    //         portDot[2].style.backgroundColor='black';
+    //     }
         
-    }
+    // }
 
-    else if(portfolioY / (window.innerWidth * 5) * 100 >60 &&
-            portfolioY / (window.innerWidth * 5) * 100 <= 78)           
-        {
-        for(i=0;i<portDot.length;i++)
-        {
-            portDot[i].style.backgroundColor='white';
-            portDot[3].style.backgroundColor='black';
-        }
+    // else if(portfolioY / (window.innerWidth * 5) * 100 >60 &&
+    //         portfolioY / (window.innerWidth * 5) * 100 <= 78)           
+    //     {
+    //     for(i=0;i<portDot.length;i++)
+    //     {
+    //         portDot[i].style.backgroundColor='white';
+    //         portDot[3].style.backgroundColor='black';
+    //     }
         
-    }
+    // }
 
-    else if(portfolioY / (window.innerWidth * 5) * 100 >78 &&
-            portfolioY / (window.innerWidth * 5) * 100 <= 100)            
-        {
-        for(i=0;i<portDot.length;i++)
-        {
-            portDot[i].style.backgroundColor='white';
-            portDot[4].style.backgroundColor='black';
-        }
+    // else if(portfolioY / (window.innerWidth * 5) * 100 >78 &&
+    //         portfolioY / (window.innerWidth * 5) * 100 <= 100)            
+    //     {
+    //     for(i=0;i<portDot.length;i++)
+    //     {
+    //         portDot[i].style.backgroundColor='white';
+    //         portDot[4].style.backgroundColor='black';
+    //     }
         
-    }
+    // }
 
-    console.log(portfolioY / (window.innerWidth * 5) * 100)
-    console.log(portfolioY);
+    
 })
 
 

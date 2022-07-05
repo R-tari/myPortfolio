@@ -460,18 +460,22 @@ img
 {
     font-weight:600;
     font-size:1.5em;
-    color:#eee;
-    background-color:rgb(0,0,0);
-    padding:20px 30px;
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 14px 24px;
+    border: none;
+    transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
+    background: linear-gradient(to right, rgb(230, 30, 77) 0%, rgb(227, 28, 95) 50%, rgb(215, 4, 102) 100%);
+    color: #fff;
 
-    border-radius:20px;
+
 }
-.slide-wrapper .content a:hover
-{
-    background-color: rgb(255,255,255);
-    border:1px solid black;
-    color:#000;
-}
+
 
 
 
@@ -500,6 +504,7 @@ img
 {
     display:flex;
     flex-direction: row;
+    height:0;
     width:200vw;
     transform:rotate(90deg) translateY(-100vh);
     transform-origin:top left;
@@ -671,6 +676,11 @@ footer .container
     {
         font-size:1.2em;
     }
+    .slide-wrapper .content .txt-box a
+    {
+        font-size:1em;
+    }
+
 }
 /* 해상도 900이하일 시  */
 
@@ -834,6 +844,10 @@ footer .container
     .profile-text p span
     {
         margin-bottom:20px;
+    }
+    .slide-wrapper .content .txt-box p
+    {
+        display:none;
     }
     
 }
